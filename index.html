@@ -20,10 +20,14 @@
 
   </head>
   <body>
-    <canvas id="game-canvas" width="800" height="800"></canvas>
+    <canvas id="game-canvas"></canvas>
 
     <script charset="utf-8">
-      var ctx = document.getElementById('game-canvas').getContext("2d");
+      var canvas = document.getElementById('game-canvas')
+      canvas.width  = Asteroids.Game.DIM_X;
+      canvas.height = Asteroids.Game.DIM_Y;
+      
+      var ctx  = canvas.getContext("2d");
       var game = new Asteroids.Game();
       var view = new Asteroids.GameView(game, ctx);
 
