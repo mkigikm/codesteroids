@@ -11,6 +11,7 @@
     <script src="lib/gameView.js"></script>
     <script src="lib/ship.js"></script>
     <script src="lib/bullet.js"></script>
+    <script src="lib/word.js"></script>
     <script src="lib/settings.js"></script>
     <style>
       #game-canvas {
@@ -26,7 +27,7 @@
       var canvas = document.getElementById('game-canvas')
       canvas.width  = Asteroids.Game.DIM_X;
       canvas.height = Asteroids.Game.DIM_Y;
-      
+
       var ctx  = canvas.getContext("2d");
       var game = new Asteroids.Game();
       var view = new Asteroids.GameView(game, ctx);
