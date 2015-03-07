@@ -31,14 +31,24 @@
     <script src="lib/settings/char.js"></script>
     <script src="lib/settings/game.js"></script>
     <script src="lib/settings/ship.js"></script>
+
+    <style>
+    canvas {
+      display: block;
+      margin: 10 auto;
+    }
+    body {
+      background: gray;
+    }
+    </style>
   </head>
   <body>
     <canvas id="game-canvas"></canvas>
 
     <script charset="utf-8">
       var canvas = document.getElementById('game-canvas')
-      canvas.width  = 1600;
-      canvas.height = 900;
+      canvas.width  = 1024;
+      canvas.height = 768;
 
       var ctx  = canvas.getContext("2d");
       var game = new Asteroids.Game();
