@@ -53,12 +53,17 @@
 
     <script charset="utf-8">
       var canvas = document.getElementById('game-canvas')
-      canvas.width  = 1024;
-      canvas.height = 768;
+      canvas.width  = window.innerWidth;
+      canvas.height = window.innerHeight;
 
       var ctx  = canvas.getContext("2d");
       var game = new Asteroids.Game();
-      var view = new Asteroids.GameView(game, ctx);
+      var view = new Asteroids.GameView(
+        game,
+        ctx,
+        window.innerWidth,
+        window.innerHeight
+      );
 
       view.start();
     </script>
