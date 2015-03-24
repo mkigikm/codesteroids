@@ -49,7 +49,7 @@
     </style>
   </head>
   <body>
-    <canvas id="game-canvas"></canvas>
+    <canvas id="game-canvas" onclick="startGame()"></canvas>
 
     <script charset="utf-8">
       var canvas = document.getElementById('game-canvas')
@@ -58,14 +58,18 @@
 
       var ctx  = canvas.getContext("2d");
       var game = new Asteroids.Game();
+      game.paused = true;
       var view = new Asteroids.GameView(
         game,
         ctx,
         window.innerWidth,
         window.innerHeight
       );
+      view.run();
 
-      view.start();
+      function startGame () {
+        view.start();
+      }
     </script>
   </body>
 </html>
