@@ -1,4 +1,4 @@
-# codesteroids
+# Codesteroids
 
 [live link](http://www.matthicks.us/codesteroids)
 
